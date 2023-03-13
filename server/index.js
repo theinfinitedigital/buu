@@ -24,7 +24,7 @@ app.get("/", async (req, res) => {
  
   try {
     const objX = JSON.parse(datanook);
-    console.log(objX)
+    //console.log(objX)
     res?.status(200).json({
       NooK_Api: objX,
     });
