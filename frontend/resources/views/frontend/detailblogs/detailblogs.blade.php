@@ -26,8 +26,7 @@
 
 <body>
     <div id="app">
-        @include('layouts.nav')
-        <homecomponent/>
+        <homecomponent />
     </div>
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
