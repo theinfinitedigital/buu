@@ -544,6 +544,39 @@ select {
     html {
         font-family: 'Kanit', sans-serif;
     }
+    
+    #slides {
+        width:1600px;
+        height: 500px;
+        margin:0 auto 27px;
+        position:relative;
+        z-index:0;
+    }
+    
+    /*
+        Slides container
+        Important:
+        Set the width of your slides container
+        Set to display none, prevents content flash
+    */
+    
+    #slides .next,#slides .prev {
+        position:absolute;
+        top:200px;
+        left: 320px;
+        width:24px;
+        height:43px;
+        display:block;
+        z-index:101;
+    }
+    
+    #slides .next {
+        left:1255px;
+    }
+    
+    /*
+        Pagination
+    */
 
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
@@ -860,6 +893,9 @@ select {
 .h-full {
   height: 100%;
 }
+.h-screen {
+  height: 100vh;
+}
 .w-0 {
   width: 0px;
 }
@@ -960,10 +996,6 @@ select {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-}
-.columns-1 {
-  -moz-columns: 1;
-       columns: 1;
 }
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -1499,132 +1531,6 @@ select {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
-@media (min-width: 640px) {
-
-  .sm\:container {
-    width: 100%;
-  }
-
-  @media (min-width: 640px) {
-
-    .sm\:container {
-      max-width: 640px;
-    }
-  }
-
-  @media (min-width: 768px) {
-
-    .sm\:container {
-      max-width: 768px;
-    }
-  }
-
-  @media (min-width: 1024px) {
-
-    .sm\:container {
-      max-width: 1024px;
-    }
-  }
-
-  @media (min-width: 1280px) {
-
-    .sm\:container {
-      max-width: 1280px;
-    }
-  }
-
-  @media (min-width: 1536px) {
-
-    .sm\:container {
-      max-width: 1536px;
-    }
-  }
-}
-
-@media (min-width: 768px) {
-
-  .md\:container {
-    width: 100%;
-  }
-
-  @media (min-width: 640px) {
-
-    .md\:container {
-      max-width: 640px;
-    }
-  }
-
-  @media (min-width: 768px) {
-
-    .md\:container {
-      max-width: 768px;
-    }
-  }
-
-  @media (min-width: 1024px) {
-
-    .md\:container {
-      max-width: 1024px;
-    }
-  }
-
-  @media (min-width: 1280px) {
-
-    .md\:container {
-      max-width: 1280px;
-    }
-  }
-
-  @media (min-width: 1536px) {
-
-    .md\:container {
-      max-width: 1536px;
-    }
-  }
-}
-
-@media (min-width: 1024px) {
-
-  .lg\:container {
-    width: 100%;
-  }
-
-  @media (min-width: 640px) {
-
-    .lg\:container {
-      max-width: 640px;
-    }
-  }
-
-  @media (min-width: 768px) {
-
-    .lg\:container {
-      max-width: 768px;
-    }
-  }
-
-  @media (min-width: 1024px) {
-
-    .lg\:container {
-      max-width: 1024px;
-    }
-  }
-
-  @media (min-width: 1280px) {
-
-    .lg\:container {
-      max-width: 1280px;
-    }
-  }
-
-  @media (min-width: 1536px) {
-
-    .lg\:container {
-      max-width: 1536px;
-    }
-  }
-}
-
 .before\:w-\[45vw\]::before {
   content: var(--tw-content);
   width: 45vw;
@@ -1643,10 +1549,6 @@ select {
 .after\:shrink-0::after {
   content: var(--tw-content);
   flex-shrink: 0;
-}
-
-.hover\:grid-cols-6:hover {
-  grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 
 .hover\:bg-amber-100:hover {
