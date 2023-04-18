@@ -9,14 +9,6 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <!-- Styles -->
-
-    <style>
-        body {
-            font-family: 'Nunito', sans-serif;
-        }
-    </style>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
 
@@ -24,7 +16,10 @@
 
 <body>
     <div id="app">
-        @include('frontend.home')
+        <navcomponent></navcomponent>
+        <main>
+            @yield('content')
+        </main>
     </div>
     <script src="{{ asset('js/app.js') }}"></script>
 </body>

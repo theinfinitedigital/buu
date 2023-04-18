@@ -1,92 +1,14 @@
 <template>
     <div class="bg-white">
-        <header>
-            <Popover class="relative bg-white">
-                <div class="mx-0 flex max-w-full items-center justify-between p-6 md:justify-start md:space-x-10 lg:px-8">
-                    <div>
-                        <a href="#" class="flex">
-                            <span class="sr-only">Your Company</span>
-                            <img class="h-8 w-auto sm:h-16" src="https://via.placeholder.com/150x150" alt="" />
-                        </a>
-                    </div>
-                    <div class="-my-2 -mr-2 md:hidden">
-                        <PopoverButton
-                            class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-amber-500">
-                            <span class="sr-only">Open menu</span>
-                            <Bars3Icon class="h-6 w-6" aria-hidden="true" />
-                        </PopoverButton>
-                    </div>
-                    <div class="hidden md:flex md:flex-1 md:items-center md:justify-end">
-                        <PopoverGroup as="nav" class="flex space-x-10">
-                            <a v-for="item in mainmenus" :key="item.name" :href="item.href"
-                                class="text-base font-bold text-gray-900 hover:text-amber-500">{{ item.name }}</a>
-                        </PopoverGroup>
-                    </div>
-                </div>
-                <transition enter-active-class="duration-200 ease-out" enter-from-class="opacity-0 scale-95"
-                    enter-to-class="opacity-100 scale-100" leave-active-class="duration-100 ease-in"
-                    leave-from-class="opacity-100 scale-100" leave-to-class="opacity-0 scale-95">
-                    <PopoverPanel focus
-                        class="absolute inset-x-0 top-0 z-30 origin-top-right transform p-2 transition md:hidden">
-                        <div
-                            class="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
-                            <div class="px-5 pt-5 pb-6">
-                                <div class="flex items-center justify-between">
-                                    <div>
-                                        <img class="h-8 w-auto" src="https://via.placeholder.com/150x150"
-                                            alt="Your Company" />
-                                    </div>
-                                    <div class="-mr-2">
-                                        <PopoverButton
-                                            class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-amber-500">
-                                            <span class="sr-only">Close menu</span>
-                                            <XMarkIcon class="h-6 w-6" aria-hidden="true" />
-                                        </PopoverButton>
-                                    </div>
-                                </div>
-                                <div class="mt-6">
-                                    <nav class="grid grid-cols-1 gap-7">
-                                        <a v-for="item in mainmenus" :key="item.name" :href="item.href"
-                                            class="-m-3 flex items-center rounded-lg p-3 hover:bg-gray-50">
-                                            <div
-                                                class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-gradient-to-r from-yellow-600 to-amber-600 text-white">
-                                                <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
-                                            </div>
-                                            <div class="ml-4 text-base font-medium text-gray-900">{{ item.name }}</div>
-                                        </a>
-                                    </nav>
-                                </div>
-                            </div>
-                            <div class="py-6 px-5">
-                                <div>
-                                    <a href="#"
-                                        class="flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-yellow-600 to-amber-600 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-yellow-700 hover:to-amber-700">Sign
-                                        up</a>
-                                    <p class="mt-6 text-center text-base font-medium text-gray-500">
-                                        Existing customer?
-                                        <a href="#" class="text-gray-900">Sign in</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </PopoverPanel>
-                </transition>
-            </Popover>
-        </header>
-
         <main>
             <!-- Hero section -->
-            <div class="relative">
-
-            </div>
-
             <div class="relative">
                 <div
                     class="slides-container h-full flex snap-x snap-mandatory overflow-hidden overflow-x-auto space-x-2 rounded scroll-smooth before:w-[45vw] before:shrink-0 after:w-[45vw] after:shrink-0 md:before:w-0 md:after:w-0">
                     <div class="slide aspect-square h-full w-full flex-shrink-0 snap-center rounded overflow-hidden">
                         <div class="relative shadow-xl sm:overflow-hidden">
                                 <div class="absolute inset-0">
-                                    <img class="h-full w-full object-cover" src="https://via.placeholder.com/1920x670"
+                                    <img class="h-auto w-full object-cover" src="https://via.placeholder.com/1920x670"
                                         alt="People working on laptops" />
                                     <div
                                         class="absolute inset-0 bg-gradient-to-r from-yellow-300 to-yellow-500 mix-blend-multiply" />

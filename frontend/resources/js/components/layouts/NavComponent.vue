@@ -20,8 +20,8 @@
                 </div>
                 <div class="hidden md:flex md:flex-1 md:items-center md:justify-end">
                     <PopoverGroup as="nav" class="flex space-x-10">
-                        <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">Home</a>
-                        <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">Associate link</a>
+                        <a href="/" class="text-base font-medium text-gray-500 hover:text-gray-900">Home</a>
+                        <a href="/associatelink" class="text-base font-medium text-gray-500 hover:text-gray-900">Associate link</a>
                         <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">About Us</a>
                         <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">Contact</a>
                     </PopoverGroup>
