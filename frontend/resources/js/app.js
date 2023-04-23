@@ -2,12 +2,12 @@ require("./bootstrap");
 
 import { createApp } from "vue";
 import navcomponent from "./components/layouts/NavComponent.vue";
-import slidescomponent from "./components/SlidesComponent.vue";
+import bannercomponent from "./components/BannerComponent.vue";
 
 createApp({
     components: {
         navcomponent,
-        slidescomponent,
+        bannercomponent,
     },
 }).mount("#app");
 
