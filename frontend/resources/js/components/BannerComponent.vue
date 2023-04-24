@@ -3,113 +3,37 @@
         <main>
             <!-- Hero section -->
             <div class="relative shadow-xl sm:overflow-hidden ">
-                            
-                            <div class="relative py-16 px-6 sm:py-24 lg:py-32 lg:px-8">
-                                <h1 class="text-center text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-                                    <span class="block text-white">Take control of your</span>
-                                    <span class="block text-amber-200">customer support</span>
-                                </h1>
-                                <p class="mx-auto mt-6 max-w-lg text-center text-xl text-amber-200 sm:max-w-3xl">Anim
-                                    aute id
-                                    magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit
-                                    sunt amet
-                                    fugiat veniam occaecat fugiat aliqua.</p>
-                                <div class="mx-auto mt-10 max-w-sm sm:flex sm:max-w-none sm:justify-center">
-                                    <div class="space-y-4 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5 sm:space-y-0">
-                                        <a href="#"
-                                            class="flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-3 text-base font-medium text-amber-700 shadow-sm hover:bg-amber-50 sm:px-8">Get
-                                            started</a>
-                                        <a href="#"
-                                            class="flex items-center justify-center rounded-md border border-transparent bg-amber-500 bg-opacity-60 px-4 py-3 text-base font-medium text-white shadow-sm hover:bg-opacity-70 sm:px-8">Live
-                                            demo</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="absolute inset-0">
-                                <img class="h-screen w-full object-cover" src="https://via.placeholder.com/1920x670"
-                                    alt="People working on laptops" />
-                                <div
-                                    class="absolute h-screen w-full  inset-0 bg-gradient-to-r from-yellow-300 to-yellow-500 mix-blend-multiply" />
-                            </div>
-                        </div>
-        
-        </main>
 
-        <footer class="bg-gray-50" aria-labelledby="footer-heading">
-            <h2 id="footer-heading" class="sr-only">Footer</h2>
-            <div class="mx-auto max-w-7xl px-6 pt-16 pb-8 lg:px-8 lg:pt-24">
-                <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-                    <div class="grid grid-cols-2 gap-8 xl:col-span-2">
-                        <div class="md:grid md:grid-cols-2 md:gap-8">
-                            <div>
-                                <h3 class="text-base font-medium text-gray-900">Solutions</h3>
-                                <ul role="list" class="mt-4 space-y-4">
-                                    <li v-for="item in footerNavigation.solutions" :key="item.name">
-                                        <a :href="item.href" class="text-base text-gray-500 hover:text-gray-900">{{
-                                            item.name }}</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="mt-12 md:mt-0">
-                                <h3 class="text-base font-medium text-gray-900">Support</h3>
-                                <ul role="list" class="mt-4 space-y-4">
-                                    <li v-for="item in footerNavigation.support" :key="item.name">
-                                        <a :href="item.href" class="text-base text-gray-500 hover:text-gray-900">{{
-                                            item.name }}</a>
-                                    </li>
-                                </ul>
-                            </div>
+                <div class="relative py-16 px-6 sm:py-24 lg:py-32 lg:px-8">
+                    <h1 class="text-center text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+                        <span class="block text-white">Take control of your</span>
+                        <span class="block text-amber-200">customer support</span>
+                    </h1>
+                    <p class="mx-auto mt-6 max-w-lg text-center text-xl text-amber-200 sm:max-w-3xl">Anim
+                        aute id
+                        magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit
+                        sunt amet
+                        fugiat veniam occaecat fugiat aliqua.</p>
+                    <div class="mx-auto mt-10 max-w-sm sm:flex sm:max-w-none sm:justify-center">
+                        <div class="space-y-4 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5 sm:space-y-0">
+                            <a href="#"
+                                class="flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-3 text-base font-medium text-amber-700 shadow-sm hover:bg-amber-50 sm:px-8">Get
+                                started</a>
+                            <a href="#"
+                                class="flex items-center justify-center rounded-md border border-transparent bg-amber-500 bg-opacity-60 px-4 py-3 text-base font-medium text-white shadow-sm hover:bg-opacity-70 sm:px-8">Live
+                                demo</a>
                         </div>
-                        <div class="md:grid md:grid-cols-2 md:gap-8">
-                            <div>
-                                <h3 class="text-base font-medium text-gray-900">Company</h3>
-                                <ul role="list" class="mt-4 space-y-4">
-                                    <li v-for="item in footerNavigation.company" :key="item.name">
-                                        <a :href="item.href" class="text-base text-gray-500 hover:text-gray-900">{{
-                                            item.name }}</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="mt-12 md:mt-0">
-                                <h3 class="text-base font-medium text-gray-900">Legal</h3>
-                                <ul role="list" class="mt-4 space-y-4">
-                                    <li v-for="item in footerNavigation.legal" :key="item.name">
-                                        <a :href="item.href" class="text-base text-gray-500 hover:text-gray-900">{{
-                                            item.name }}</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-12 xl:mt-0">
-                        <h3 class="text-base font-medium text-gray-900">Subscribe to our newsletter</h3>
-                        <p class="mt-4 text-base text-gray-500">The latest news, articles, and resources, sent to your inbox
-                            weekly.</p>
-                        <form class="mt-4 sm:flex sm:max-w-md">
-                            <label for="email-address" class="sr-only">Email address</label>
-                            <input type="email" name="email-address" id="email-address" autocomplete="email" required=""
-                                class="w-full min-w-0 appearance-none rounded-md border border-gray-300 bg-white py-2 px-4 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:border-amber-500 focus:placeholder-gray-400 focus:outline-none focus:ring-amber-500"
-                                placeholder="Enter your email" />
-                            <div class="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-                                <button type="submit"
-                                    class="flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-yellow-600 to-amber-600 bg-origin-border px-4 py-3 text-base font-medium text-white shadow-sm hover:from-yellow-700 hover:to-amber-700">Subscribe</button>
-                            </div>
-                        </form>
                     </div>
                 </div>
-                <div class="mt-12 border-t border-gray-200 pt-8 md:flex md:items-center md:justify-between lg:mt-16">
-                    <div class="flex space-x-6 md:order-2">
-                        <a v-for="item in footerNavigation.social" :key="item.name" :href="item.href"
-                            class="text-gray-400 hover:text-gray-500">
-                            <span class="sr-only">{{ item.name }}</span>
-                            <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
-                        </a>
-                    </div>
-                    <p class="mt-8 text-base text-gray-400 md:order-1 md:mt-0">&copy; 2020 Your Company, Inc. All rights
-                        reserved.</p>
+                <div class="absolute inset-0">
+                    <img class="h-screen w-full object-cover" src="https://via.placeholder.com/1920x670"
+                        alt="People working on laptops" />
+                    <div
+                        class="absolute h-screen w-full  inset-0 bg-gradient-to-r from-yellow-300 to-yellow-500 mix-blend-multiply" />
                 </div>
             </div>
-        </footer>
+
+        </main>
     </div>
 </template>
   
