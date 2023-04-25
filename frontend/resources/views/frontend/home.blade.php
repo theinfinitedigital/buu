@@ -62,25 +62,6 @@
                     </div>
                 @endfor
             </div>
-            <div>
-                <div class="mx-auto max-w-[1782px] mb-10 text-center">
-                    <h2 class="text-3xl text-primarybuu font-bold capitalize pb-2">Content 1</h2>
-                    <p class="text-lg text-neutralbuu ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat
-                        temporibus aut
-                        similique ducimus fugit tempora id consequuntur aliquid? Doloremque cum tenetur culpa quis et quam
-                        eveniet ducimus dolorum maiores porro. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                        Iusto, at laboriosam corrupti ab dignissimos perferendis neque. Quia cupiditate nobis repudiandae
-                        hic unde iste. Rerum dolore inventore beatae earum, eveniet doloremque.</p>
-                    <div class="mt-20 mb-5 mx-auto w-1/12">
-                        <a href="#" class="">
-                            <button
-                                class="py-2 px-4 bg-secondarybuu text-white text-sm capitalize rounded-xl shadow-xl h-10 w-auto">
-                                read more
-                            </button>
-                        </a>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 @endsection

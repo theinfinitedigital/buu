@@ -20,6 +20,7 @@
         <main>
             @yield('content')
         </main>
+        <footercomponent></footercomponent>
     </div>
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
