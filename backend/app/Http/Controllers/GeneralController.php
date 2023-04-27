@@ -38,7 +38,9 @@ class GeneralController extends Controller
             $data->facebook = $request->facebook;
             $data->line = $request->line;
             $data->youtube = $request->youtube;
-            // $data->index_content = $request->index_content ?? '';
+            $data->index_header_title = $request->index_header_title;
+            $data->index_title_content = $request->index_title_content;
+            $data->index_content = $request->index_content ?? '';
 
             
             if($request->contact_us_path){
@@ -81,14 +83,14 @@ class GeneralController extends Controller
                 $index_banner = 'storage/banner/'.$imageName;
                 $data->index_banner = $index_banner;
             }
-            // if($request->index_cover_path){
+            if($request->index_cover_path){
                 
-            //     // unlink(public_path($data->index_cover_path)); // del old file
-            //     $imageName = time().rand(10,9999999).'.'.$request->index_cover_path->extension(); 
-            //     $request->index_cover_path->move(public_path('storage/banner/'), $imageName);
-            //     $index_cover_path = 'storage/banner/'.$imageName;
-            //     $data->index_cover_path = $index_cover_path;
-            // }
+                // unlink(public_path($data->index_cover_path)); // del old file
+                $imageName = time().rand(10,9999999).'.'.$request->index_cover_path->extension(); 
+                $request->index_cover_path->move(public_path('storage/banner/'), $imageName);
+                $index_cover_path = 'storage/banner/'.$imageName;
+                $data->index_cover_path = $index_cover_path;
+            }
 
             $data->save();
             

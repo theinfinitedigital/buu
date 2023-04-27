@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-10">
             <div class="card">
-                <div class="card-header">{{ __('จัดการคณะทำงานร่วมกัน') }}</div>
+                <div class="card-header">{{ __('จัดการบุคลากร') }}</div>
 
                 <div class="card-body">
                     @if (session('success'))
@@ -29,15 +29,16 @@
                     <div class="row">
                         <div class="col-4">
                             <a type="button" class="btn btn-secondary" href="/">กลับ</a>
-                            <a type="button" href="{{ route('add_workgroup') }}" class="btn btn-primary">เพิ่ม</a>
+                            <a type="button" href="{{ route('add_personnel') }}" class="btn btn-primary">เพิ่ม</a>
                         </div>
                     </div>
                     <table class="table">
                         <thead>
                             <tr>
                                 <td>No</td>
-                                <td>title_th</td>
-                                <td>title_en</td>
+                                <td>name_surname_th</td>
+                                <td>name_surname_en</td>
+                                <td>position</td>
                                 <td></td>
                             </tr>
                         </thead>
@@ -45,16 +46,17 @@
                             @forelse ($data as $key => $item )
                                 <tr>
                                     <th scope="row">{{$key+1}}</th>
-                                        <td>{{$item->title_th}}</td>
-                                        <td>{{$item->title_en}}</td>
+                                        <td>{{$item->name_surname_th}}</td>
+                                        <td>{{$item->name_surname_en}}</td>
+                                        <td>{{$item->position}}</td>
                                         <td>
-                                            <a class="btn btn-warning" href="<?php echo '/edit/workgroup/'.$item->id.'&'.$item->uid ?>">แก้ไข</a>
-                                            <a href="{{ route('del_workgroup',[$item->id]) }}" class="btn btn-danger" onclick="return confirm('คุณต้องการลบข้อมูลนี้ใช่หรือไหม?');">ลบ</a>
+                                            <a class="btn btn-warning" href="<?php echo '/edit/personnel/'.$item->id.'&'.$item->uid ?>">แก้ไข</a>
+                                            <a href="{{ route('del_personnel',[$item->id]) }}" class="btn btn-danger" onclick="return confirm('คุณต้องการลบข้อมูลนี้ใช่หรือไหม?');">ลบ</a>
                                     </td>
                                 </tr>
                             @empty
                                 <tr>
-                                    <td colspan="4">ไม่มีข้อมูล</td>
+                                    <td colspan="5">ไม่มีข้อมูล</td>
                                 </tr>
                             @endforelse
                         </tbody>

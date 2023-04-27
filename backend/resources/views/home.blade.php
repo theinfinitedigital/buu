@@ -14,6 +14,9 @@
                     <a href="{{ route('index_sub_categories') }}" type="button" class="btn btn-primary" >Sub Categories</a>
                     <a href="{{ route('index_general') }}" type="button" class="btn btn-primary" >Generals</a>
                     <a href="{{ route('index_workgroup') }}" type="button" class="btn btn-primary" >Working Group</a>
+                    <a href="{{ route('index_department') }}" type="button" class="btn btn-primary" >Department</a>
+                    <a href="{{ route('index_personnel') }}" type="button" class="btn btn-primary" >Personnel</a>
+
                 </div>
             </div>
         </div>

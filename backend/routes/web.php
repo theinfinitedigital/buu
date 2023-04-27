@@ -58,3 +58,17 @@ Route::get('/edit/workgroup/{id}&{uid}', [App\Http\Controllers\WorkgroupControll
 Route::post('/update/workgroup', [App\Http\Controllers\WorkgroupController::class, 'update'])->name('update_workgroup');
 Route::get('/del-workgroup/workgroup/{id}', [App\Http\Controllers\WorkgroupController::class, 'del'])->name('del_workgroup');
 
+Route::get('/department', [App\Http\Controllers\DepartmentController::class, 'index'])->name('index_department');
+Route::get('/add-department', [App\Http\Controllers\DepartmentController::class, 'add'])->name('add_department');
+Route::post('/create/department', [App\Http\Controllers\DepartmentController::class, 'create'])->name('create_department');
+Route::get('/edit/department/{id}&{uid}', [App\Http\Controllers\DepartmentController::class, 'edit'])->name('edit_department');
+Route::post('/update/department', [App\Http\Controllers\DepartmentController::class, 'update'])->name('update_department');
+Route::get('/del-department/department/{id}', [App\Http\Controllers\DepartmentController::class, 'del'])->name('del_department');
+
+Route::get('/personnel', [App\Http\Controllers\PersonnelController::class, 'index'])->name('index_personnel');
+Route::get('/add-personnel', [App\Http\Controllers\PersonnelController::class, 'add'])->name('add_personnel');
+Route::post('/create/personnel', [App\Http\Controllers\PersonnelController::class, 'create'])->name('create_personnel');
+Route::get('/edit/personnel/{id}&{uid}', [App\Http\Controllers\PersonnelController::class, 'edit'])->name('edit_personnel');
+Route::post('/update/personnel', [App\Http\Controllers\PersonnelController::class, 'update'])->name('update_personnel');
+Route::get('/del-personnel/personnel/{id}', [App\Http\Controllers\PersonnelController::class, 'del'])->name('del_personnel');
+

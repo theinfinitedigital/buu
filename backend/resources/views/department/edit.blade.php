@@ -4,9 +4,13 @@
     <div class="row justify-content-center">
         <div class="col-md-10">
             <div class="card">
-                <div class="card-header">เพิ่มคณะการทำงานร่วมกัน</div>
+                <div class="card-header">แก้ไขคณะ</div>
                 <div class="card-body">
-
+                    @if (session('success'))
+                    <div class="alert alert-success" role="alert">
+                        {{ session('success') }}
+                    </div>
+                    @endif
                     @if ($errors->any())
                     <div class="demo-spacing-0 mb-1">
                         <div class="alert alert-danger" role="alert">
@@ -21,16 +25,17 @@
                     </div>
                     @endif
                     <div class="row justify-content-center">
-                        <form action="{{ route('create_workgroup') }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('update_department') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="col-md-10">
-                                <a type="button" class="btn btn-secondary" href="/workgroup">กลับ</a>
+                                <a type="button" class="btn btn-secondary" href="/department">กลับ</a>
                                 <div class="row my-4 justify-content-center">
+                                    <input type="hidden" name="id" id="id" value="{{ $data->id }}" >
                                     <div class="col-sm-3 col-md-3 col-lg-3">
                                         title_th *
                                     </div>
                                     <div class="col-sm-7 col-md-7 col-lg-7">
-                                        <input class="form-control @error('title_th') is-invalid @enderror" type="text" name="title_th" id="title_th" value="{{ old('title_th') }}" required>
+                                        <input class="form-control @error('title_th') is-invalid @enderror" type="text" name="title_th" id="title_th" value="{{ $data->title_th }}" required>
                                     </div>
                                 </div>
                                 <div class="row my-4 justify-content-center">
@@ -38,7 +43,7 @@
                                         title_en *
                                     </div>
                                     <div class="col-sm-7 col-md-7 col-lg-7">
-                                        <input class="form-control @error('title_en') is-invalid @enderror" type="text" name="title_en" id="title_en" value="{{ old('title_en') }}" required>
+                                        <input class="form-control @error('title_en') is-invalid @enderror" type="text" name="title_en" id="title_en" value="{{ $data->title_en }}" required>
                                     </div>
                                 </div>
 
@@ -47,18 +52,19 @@
                                     <div class="col-sm-3 col-md-3 col-lg-3">
                                     </div>
                                     <div class="col-sm-7 col-md-7 col-lg-7">
-                                        <img src="" alt="" id="preview" width="400px" style="display: none;">
+                                        <img src="{{ asset($data->path) }}" alt="" id="preview" width="400px">
                                     </div>
                                 </div>
 
                                 <div class="row my-4 justify-content-center">
                                     <div class="col-sm-3 col-md-3 col-lg-3">
-                                        path *
+                                        path
                                     </div>
                                     <div class="col-sm-7 col-md-7 col-lg-7">
-                                        <input class="form-control @error('path') is-invalid @enderror" type="file" name="path" id="path" onchange="get_images(event);" required>
+                                        <input class="form-control @error('path') is-invalid @enderror" type="file" name="path" id="path" onchange="get_images(event);">
                                     </div>
                                 </div>
+                                
 
 
                                 <div class="row my-4 justify-content-center">
@@ -85,7 +91,6 @@
             var output = document.getElementById('preview');
             output.src = reader.result;
         };
-        document.getElementById('preview').style.display='block'
         reader.readAsDataURL(event.target.files[0]);
     }
 

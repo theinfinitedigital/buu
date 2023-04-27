@@ -4,7 +4,7 @@
     <div class="row justify-content-center">
         <div class="col-md-10">
             <div class="card">
-                <div class="card-header">เพิ่มคณะการทำงานร่วมกัน</div>
+                <div class="card-header">เพิ่มบุคลากร</div>
                 <div class="card-body">
 
                     @if ($errors->any())
@@ -21,24 +21,55 @@
                     </div>
                     @endif
                     <div class="row justify-content-center">
-                        <form action="{{ route('create_workgroup') }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('create_personnel') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="col-md-10">
-                                <a type="button" class="btn btn-secondary" href="/workgroup">กลับ</a>
+                                <a type="button" class="btn btn-secondary" href="/personnel">กลับ</a>
                                 <div class="row my-4 justify-content-center">
                                     <div class="col-sm-3 col-md-3 col-lg-3">
-                                        title_th *
+                                        name_surname_th *
                                     </div>
                                     <div class="col-sm-7 col-md-7 col-lg-7">
-                                        <input class="form-control @error('title_th') is-invalid @enderror" type="text" name="title_th" id="title_th" value="{{ old('title_th') }}" required>
+                                        <input class="form-control @error('name_surname_th') is-invalid @enderror" type="text" name="name_surname_th" id="name_surname_th" value="{{ old('name_surname_th') }}" required>
                                     </div>
                                 </div>
                                 <div class="row my-4 justify-content-center">
                                     <div class="col-sm-3 col-md-3 col-lg-3">
-                                        title_en *
+                                        name_surname_en *
                                     </div>
                                     <div class="col-sm-7 col-md-7 col-lg-7">
-                                        <input class="form-control @error('title_en') is-invalid @enderror" type="text" name="title_en" id="title_en" value="{{ old('title_en') }}" required>
+                                        <input class="form-control @error('name_surname_en') is-invalid @enderror" type="text" name="name_surname_en" id="name_surname_en" value="{{ old('name_surname_en') }}" required>
+                                    </div>
+                                </div>
+                                <div class="row my-4 justify-content-center">
+                                    <div class="col-sm-3 col-md-3 col-lg-3">
+                                        department *
+                                    </div>
+                                    <div class="col-sm-7 col-md-7 col-lg-7">
+                                        <select class="form-control @error('department_id') is-invalid @enderror" name="department_id" id="department_id" required>
+                                            <option value="" selected disabled>select</option>
+                                            @foreach($department as $item)
+                                                <option value="{{$item->id}}">{{$item->title_th}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="row my-4 justify-content-center">
+                                    <div class="col-sm-3 col-md-3 col-lg-3">
+                                    position *
+                                    </div>
+                                    <div class="col-sm-7 col-md-7 col-lg-7">
+                                        <input class="form-control @error('position') is-invalid @enderror" type="text" name="position" id="position" value="{{ old('position') }}" required>
+                                    </div>
+                                </div>
+
+                                <div class="row my-4 justify-content-center">
+                                    <div class="col-sm-3 col-md-3 col-lg-3">
+                                    detail
+                                    </div>
+                                    <div class="col-sm-7 col-md-7 col-lg-7">
+                                        <textarea class="form-control @error('detail') is-invalid @enderror" name="detail" id="detail" cols="30" rows="10">{{ old('detail') }}</textarea>
                                     </div>
                                 </div>
 

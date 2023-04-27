@@ -46,6 +46,32 @@
                                         <input class="form-control @error('index_banner') is-invalid @enderror" type="file" name="index_banner" id="index_banner" onchange="get_images(event,5);">
                                     </div>
                                 </div>
+                                <div class="row my-4 justify-content-center">
+                                    <input type="hidden" name="id" id="id" value="{{ $data->id }}" >
+                                    <div class="col-sm-3 col-md-3 col-lg-3">
+                                        index_header_title
+                                    </div>
+                                    <div class="col-sm-7 col-md-7 col-lg-7">
+                                        <input class="form-control @error('index_header_title') is-invalid @enderror" type="text" name="index_header_title" id="index_header_title" value="{{ $data->index_header_title }}" required>
+                                    </div>
+                                </div>
+                                <div class="row my-4 justify-content-center">
+                                    <input type="hidden" name="id" id="id" value="{{ $data->id }}" >
+                                    <div class="col-sm-3 col-md-3 col-lg-3">
+                                        index_title_content
+                                    </div>
+                                    <div class="col-sm-7 col-md-7 col-lg-7">
+                                        <input class="form-control @error('index_title_content') is-invalid @enderror" type="text" name="index_title_content" id="index_title_content" value="{{ $data->index_title_content }}" required>
+                                    </div>
+                                </div>
+                                <div class="row my-4 justify-content-center">
+                                    <div class="col-sm-3 col-md-3 col-lg-3">
+                                        index_content
+                                    </div>
+                                    <div class="col-sm-7 col-md-7 col-lg-7">
+                                        <textarea class="form-control @error('index_content') is-invalid @enderror" name="index_content" id="index_content" cols="30" rows="10">{{$data->index_content}}</textarea>
+                                    </div>
+                                </div>
 
                                 <div class="row my-4 justify-content-center">
                                     <div class="col-sm-3 col-md-3 col-lg-3">
@@ -158,7 +184,7 @@
                                         email *
                                     </div>
                                     <div class="col-sm-7 col-md-7 col-lg-7">
-                                        <input class="form-control @error('email') is-invalid @enderror" type="text" name="email" id="email" value="{{ $data->email }}" required>
+                                        <input class="form-control @error('email') is-invalid @enderror" type="email" name="email" id="email" value="{{ $data->email }}" required>
                                     </div>
                                 </div>
                                 <div class="row my-4 justify-content-center">
@@ -166,7 +192,7 @@
                                         tel *
                                     </div>
                                     <div class="col-sm-7 col-md-7 col-lg-7">
-                                        <input class="form-control @error('tel') is-invalid @enderror" type="text" name="tel" id="tel" value="{{ $data->tel }}" required>
+                                        <input class="form-control @error('tel') is-invalid @enderror" type="number" name="tel" id="tel" value="{{ $data->tel }}" required>
                                     </div>
                                 </div>
                                 <div class="row my-4 justify-content-center">

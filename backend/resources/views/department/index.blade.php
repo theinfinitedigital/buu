@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-10">
             <div class="card">
-                <div class="card-header">{{ __('จัดการคณะทำงานร่วมกัน') }}</div>
+                <div class="card-header">{{ __('จัดการคณะ') }}</div>
 
                 <div class="card-body">
                     @if (session('success'))
@@ -29,7 +29,7 @@
                     <div class="row">
                         <div class="col-4">
                             <a type="button" class="btn btn-secondary" href="/">กลับ</a>
-                            <a type="button" href="{{ route('add_workgroup') }}" class="btn btn-primary">เพิ่ม</a>
+                            <a type="button" href="{{ route('add_department') }}" class="btn btn-primary">เพิ่ม</a>
                         </div>
                     </div>
                     <table class="table">
@@ -48,8 +48,8 @@
                                         <td>{{$item->title_th}}</td>
                                         <td>{{$item->title_en}}</td>
                                         <td>
-                                            <a class="btn btn-warning" href="<?php echo '/edit/workgroup/'.$item->id.'&'.$item->uid ?>">แก้ไข</a>
-                                            <a href="{{ route('del_workgroup',[$item->id]) }}" class="btn btn-danger" onclick="return confirm('คุณต้องการลบข้อมูลนี้ใช่หรือไหม?');">ลบ</a>
+                                            <a class="btn btn-warning" href="<?php echo '/edit/department/'.$item->id.'&'.$item->uid ?>">แก้ไข</a>
+                                            <a href="{{ route('del_department',[$item->id]) }}" class="btn btn-danger" onclick="return confirm('คุณต้องการลบข้อมูลนี้ใช่หรือไหม?');">ลบ</a>
                                     </td>
                                 </tr>
                             @empty

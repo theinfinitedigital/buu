@@ -4,7 +4,7 @@
     <div class="row justify-content-center">
         <div class="col-md-10">
             <div class="card">
-                <div class="card-header">เพิ่มคณะการทำงานร่วมกัน</div>
+                <div class="card-header">เพิ่มคณะ</div>
                 <div class="card-body">
 
                     @if ($errors->any())
@@ -21,10 +21,10 @@
                     </div>
                     @endif
                     <div class="row justify-content-center">
-                        <form action="{{ route('create_workgroup') }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('create_department') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="col-md-10">
-                                <a type="button" class="btn btn-secondary" href="/workgroup">กลับ</a>
+                                <a type="button" class="btn btn-secondary" href="/department">กลับ</a>
                                 <div class="row my-4 justify-content-center">
                                     <div class="col-sm-3 col-md-3 col-lg-3">
                                         title_th *
