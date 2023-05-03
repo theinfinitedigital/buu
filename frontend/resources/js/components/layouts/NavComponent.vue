@@ -42,7 +42,6 @@
                             </DisclosurePanel>
                         </div>
                         <DisclosureButton aria-hidden="true">Is team pricing available?</DisclosureButton>
-                        <DisclosureButton>Is team pricing available?</DisclosureButton>
                     </Disclosure>
                     <Menu as="div" class="relative inline-block text-left">
                         <div>

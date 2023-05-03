@@ -1,22 +1,43 @@
 <template>
-  <footer class="bg-secondarybuu">
-    <div class="mx-auto overflow-hidden py-20 px-6 sm:py-24 lg:px-8">
-      <div class="grid grid-cols-3 gap-2 justify-items-center mb-10">
+  <footer class="bg-[url('/images/Footer/bg-footer-02.png')] bg-cover bg-no-repeat">
+  
+    <img class="w-full h-auto object-cover" src="images/Footer/footer-02.jpg">
+
+    <!--div class="mx-auto overflow-hidden py-20 px-6 sm:py-24 lg:px-8">
+      <div class="grid grid-cols-4 gap-0 mb-10">
         <div>
-          <img class="w-full h-auto object-cover" src="https://via.placeholder.com/200x159">
+          <img class="w-full h-auto object-cover" src="images/Footer/bg-footer-02.png">
         </div>
-        <div class="text-start pt-5">
-          <div>
-            <h2 class="text-3xl text-primarybuu font-bold capitalize pb-2">Agriculture</h2>
-            <p class="text-lg text-neutralbuu indent-6">การเกษตร ภาคตะวันออก</p>
-          </div>
-          <div>
-            <h2 class="text-3xl text-primarybuu font-bold capitalize pb-2">Agriculture</h2>
-            <p class="text-lg text-neutralbuu indent-6">การเกษตร ภาคตะวันออก</p>
-          </div>
-          <div>
-            <h2 class="text-3xl text-primarybuu font-bold capitalize pb-2">Agriculture</h2>
-            <p class="text-lg text-neutralbuu indent-6">การเกษตร ภาคตะวันออก</p>
+        <div class="col-span-2">
+          <div class="flex flex-row gap-4 m-5">
+            <div class=" flex-auto w-3/5">
+              <div>
+                <h2 class="text-3xl text-primarybuu font-bold capitalize pb-2">Agriculture</h2>
+                <p class="text-lg text-neutralbuu indent-6">การเกษตร ภาคตะวันออก</p>
+              </div>
+              <div>
+                <h2 class="text-3xl text-primarybuu font-bold capitalize pb-2">Agriculture</h2>
+                <p class="text-lg text-neutralbuu indent-6">การเกษตร ภาคตะวันออก</p>
+              </div>
+              <div>
+                <h2 class="text-3xl text-primarybuu font-bold capitalize pb-2">Agriculture</h2>
+                <p class="text-lg text-neutralbuu indent-6">การเกษตร ภาคตะวันออก</p>
+              </div>
+            </div>
+            <div class="flex-auto w-2/5">
+              <div>
+                <h2 class="text-3xl text-primarybuu font-bold capitalize pb-2">Agriculture</h2>
+                <p class="text-lg text-neutralbuu indent-6">การเกษตร ภาคตะวันออก</p>
+              </div>
+              <div>
+                <h2 class="text-3xl text-primarybuu font-bold capitalize pb-2">Agriculture</h2>
+                <p class="text-lg text-neutralbuu indent-6">การเกษตร ภาคตะวันออก</p>
+              </div>
+              <div>
+                <h2 class="text-3xl text-primarybuu font-bold capitalize pb-2">Agriculture</h2>
+                <p class="text-lg text-neutralbuu indent-6">การเกษตร ภาคตะวันออก</p>
+              </div>
+            </div>
           </div>
         </div>
         <div class="text-start pt-5">
@@ -29,11 +50,7 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="mx-auto max-w-7xl overflow-hidden py-20 px-6 sm:py-24 lg:px-8">
-
-      <p class="mt-10 text-center text-xs leading-5 text-gray-500">&copy; 2020 Your Company, Inc. All rights reserved.</p>
-    </div>
+    </div-->
   </footer>
 </template>
 

@@ -28898,42 +28898,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  "class": "bg-secondarybuu"
+  "class": "bg-[url('/images/Footer/bg-footer-02.png')] bg-cover bg-no-repeat"
 };
-var _hoisted_2 = {
-  "class": "mx-auto overflow-hidden py-20 px-6 sm:py-24 lg:px-8"
-};
-var _hoisted_3 = {
-  "class": "grid grid-cols-3 gap-2 justify-items-center mb-10"
-};
-var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div><img class=\"w-full h-auto object-cover\" src=\"https://via.placeholder.com/200x159\"></div><div class=\"text-start pt-5\"><div><h2 class=\"text-3xl text-primarybuu font-bold capitalize pb-2\">Agriculture</h2><p class=\"text-lg text-neutralbuu indent-6\">การเกษตร ภาคตะวันออก</p></div><div><h2 class=\"text-3xl text-primarybuu font-bold capitalize pb-2\">Agriculture</h2><p class=\"text-lg text-neutralbuu indent-6\">การเกษตร ภาคตะวันออก</p></div><div><h2 class=\"text-3xl text-primarybuu font-bold capitalize pb-2\">Agriculture</h2><p class=\"text-lg text-neutralbuu indent-6\">การเกษตร ภาคตะวันออก</p></div></div>", 2);
-var _hoisted_6 = {
-  "class": "text-start pt-5"
-};
-var _hoisted_7 = {
-  "class": "flex justify-center space-x-10"
-};
-var _hoisted_8 = ["href"];
-var _hoisted_9 = {
-  "class": "sr-only"
-};
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "mx-auto max-w-7xl overflow-hidden py-20 px-6 sm:py-24 lg:px-8"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
-  "class": "mt-10 text-center text-xs leading-5 text-gray-500"
-}, "© 2020 Your Company, Inc. All rights reserved.")], -1 /* HOISTED */);
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  "class": "w-full h-auto object-cover",
+  src: "images/Footer/footer-02.jpg"
+}, null, -1 /* HOISTED */);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("footer", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [_hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.navigation.social, function (item) {
-    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("a", {
-      key: item.name,
-      href: item.href,
-      "class": "text-gray-400 hover:text-gray-500"
-    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(item.name), 1 /* TEXT */), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)((0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveDynamicComponent)(item.icon), {
-      "class": "h-6 w-6",
-      "aria-hidden": "true"
-    }))], 8 /* PROPS */, _hoisted_8);
-  }), 128 /* KEYED_FRAGMENT */))])])])]), _hoisted_10]);
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("footer", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("div class=\"mx-auto overflow-hidden py-20 px-6 sm:py-24 lg:px-8\">\n      <div class=\"grid grid-cols-4 gap-0 mb-10\">\n        <div>\n          <img class=\"w-full h-auto object-cover\" src=\"images/Footer/bg-footer-02.png\">\n        </div>\n        <div class=\"col-span-2\">\n          <div class=\"flex flex-row gap-4 m-5\">\n            <div class=\" flex-auto w-3/5\">\n              <div>\n                <h2 class=\"text-3xl text-primarybuu font-bold capitalize pb-2\">Agriculture</h2>\n                <p class=\"text-lg text-neutralbuu indent-6\">การเกษตร ภาคตะวันออก</p>\n              </div>\n              <div>\n                <h2 class=\"text-3xl text-primarybuu font-bold capitalize pb-2\">Agriculture</h2>\n                <p class=\"text-lg text-neutralbuu indent-6\">การเกษตร ภาคตะวันออก</p>\n              </div>\n              <div>\n                <h2 class=\"text-3xl text-primarybuu font-bold capitalize pb-2\">Agriculture</h2>\n                <p class=\"text-lg text-neutralbuu indent-6\">การเกษตร ภาคตะวันออก</p>\n              </div>\n            </div>\n            <div class=\"flex-auto w-2/5\">\n              <div>\n                <h2 class=\"text-3xl text-primarybuu font-bold capitalize pb-2\">Agriculture</h2>\n                <p class=\"text-lg text-neutralbuu indent-6\">การเกษตร ภาคตะวันออก</p>\n              </div>\n              <div>\n                <h2 class=\"text-3xl text-primarybuu font-bold capitalize pb-2\">Agriculture</h2>\n                <p class=\"text-lg text-neutralbuu indent-6\">การเกษตร ภาคตะวันออก</p>\n              </div>\n              <div>\n                <h2 class=\"text-3xl text-primarybuu font-bold capitalize pb-2\">Agriculture</h2>\n                <p class=\"text-lg text-neutralbuu indent-6\">การเกษตร ภาคตะวันออก</p>\n              </div>\n            </div>\n          </div>\n        </div>\n        <div class=\"text-start pt-5\">\n          <div class=\"flex justify-center space-x-10\">\n            <a v-for=\"item in navigation.social\" :key=\"item.name\" :href=\"item.href\"\n              class=\"text-gray-400 hover:text-gray-500\">\n              <span class=\"sr-only\">{{ item.name }}</span>\n              <component :is=\"item.icon\" class=\"h-6 w-6\" aria-hidden=\"true\" />\n            </a>\n          </div>\n        </div>\n      </div>\n    </div")]);
 }
 
 /***/ }),
@@ -29133,11 +29106,6 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           })], 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vShow, open]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["DisclosureButton"], {
             "aria-hidden": "true"
           }, {
-            "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-              return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Is team pricing available?")];
-            }),
-            _: 1 /* STABLE */
-          }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["DisclosureButton"], null, {
             "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
               return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Is team pricing available?")];
             }),
