@@ -28960,7 +28960,7 @@ var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
   href: "/associatelink",
   "class": "text-base font-medium text-gray-500 hover:text-gray-900"
-}, "Associate link", -1 /* HOISTED */);
+}, "Data Services", -1 /* HOISTED */);
 var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
   href: "#",
   "class": "text-base font-medium text-gray-500 hover:text-gray-900"

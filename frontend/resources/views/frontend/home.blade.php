@@ -2,7 +2,7 @@
 @section('content')
     <div class="grid grid-cols-1">
         <div class="relative">
-            <img class="h-auto md:h-screen w-full object-cover object-center" src="https://via.placeholder.com/1920x670"
+            <img class="h-auto md:h-screen w-full object-cover object-center" src="{{asset('images/Home/banner 1920x980.jpg')}}"
                 alt="People working on laptops" />
         </div>
         <div class="absolute bottom-10 left-10">

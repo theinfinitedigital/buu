@@ -8,14 +8,17 @@ module.exports = {
     theme: {
         colors: {
             transparent: "transparent",
-            current: 'currentColor',
+            current: "currentColor",
             black: "#000",
             white: "#fff",
             primarybuu: "#0966D5",
             secondarybuu: "#008080",
-            neutralbuu: "#4D4D4D",
+            neutralbuu: "#616161",
         },
         extend: {},
     },
-    plugins: [require("@tailwindcss/forms")],
+    plugins: [
+        require("@tailwindcss/forms"),
+        require("@tailwindcss/line-clamp"),
+    ],
 };
