@@ -12,10 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('frontend.home');
-});
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/storages', function () {
     return view('frontend.storages');
@@ -29,11 +26,11 @@ Route::get('/associatelink', function () {
     return view('frontend.associatelink');
 });
 
-Route::get('/blogs', function () {
+Route::get('/data-services', function () {
     return view('frontend.blogs');
 });
 
-Route::get('/detailblogs', function () {
+Route::get('/dataservices-detail', function () {
     return view('frontend.detailblogs.detailblogs');
 });
 

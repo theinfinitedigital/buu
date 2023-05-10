@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <div class="grid grid-cols-1">
+    <div class="grid grid-cols-1 mb-[80px]">
         <div class="relative">
             <img class="h-auto md:h-screen w-full object-cover object-center" src="{{asset('images/Home/banner 1920x980.jpg')}}"
                 alt="People working on laptops" />
@@ -12,18 +12,18 @@
                 eveniet ducimus dolorum maiores porro.</p>
         </div>
     </div>
-    <div class="mx-auto mb-5 mt-10 w-full">
+    <div class="mx-auto mb-[40px] w-full">
         <div class="grid grid-cols-1 px-4 md:px-20 ">
-            <div class="text-center mb-10">
-                <h1 class="text-[50px] text-primarybuu font-bold uppercase pb-2">DATA CENTER</h1>
+            <div class="text-center pb-10">
+                <h1 class="text-5xl text-primarybuu font-medium uppercase">DATA CENTER</h1>
             </div>
-            <div class="flex justify-center mb-10">
+            <div class="flex justify-center pb-20">
                 <div class="rounded-xl text-center ">
                     <img class="w-full h-auto object-cover rounded-xl" src="https://via.placeholder.com/715x389">
                 </div>
             </div>
             <div>
-                <div class="mx-auto max-w-[1782px] mb-10 text-center">
+                <div class="mx-auto max-w-[1782px] mb-[80px] text-center">
                     <h2 class="text-3xl text-primarybuu font-bold capitalize pb-2">Content 1</h2>
                     <p class="text-lg text-neutralbuu ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat
                         temporibus aut
@@ -43,23 +43,25 @@
             </div>
         </div>
     </div>
-    <div class="mx-auto mb-5 mt-16 w-full">
+    <div class="mx-auto mb-[160px] w-full">
         <div class="grid grid-cols-1 px-4 md:px-20 ">
             <div class="text-center mb-10">
                 <h1 class="text-[50px] text-primarybuu font-bold uppercase pb-2">ข้อมูลให้บริการ</h1>
             </div>
-            <div class="grid grid-cols-3 gap-24 justify-items-center mb-10">
+            <div class="grid grid-cols-3 gap-24 justify-items-center ">
                 @for ($i = 0; $i < 11; $i++)
+                <a href="/dataservices-detail">
                     <div
-                        class="flex flex-col p-5 mb-10 w-[472px] h-[452px] rounded-xl bg-white shadow-[1px_1px_10px_0_rgba(0,0,0,0.3)]">
+                        class="flex flex-col p-5 w-[472px] h-[452px] rounded-xl bg-white shadow-[1px_1px_10px_0_rgba(0,0,0,0.3)]">
                         <div>
                             <img class="w-full h-auto object-cover rounded-xl" src="https://via.placeholder.com/433x299">
                         </div>
-                        <div class="text-start pt-5">
-                            <h2 class="text-3xl text-primarybuu font-bold capitalize pb-2">Agriculture</h2>
-                            <p class="text-lg text-neutralbuu indent-6">การเกษตร ภาคตะวันออก</p>
+                        <div class="text-center pt-9">
+                            <h2 class="text-2xl text-secondarybuu font-medium capitalize">Agriculture</h2>
+                            <p class="text-base text-neutralbuu">การเกษตร ภาคตะวันออก</p>
                         </div>
                     </div>
+                </a>
                 @endfor
             </div>
         </div>

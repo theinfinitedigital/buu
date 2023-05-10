@@ -28647,96 +28647,96 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var __default__ = {
-  name: 'navcomponent'
+  name: "navcomponent"
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (/*#__PURE__*/Object.assign(__default__, {
   setup: function setup(__props, _ref) {
     var expose = _ref.expose;
     expose();
     var solutions = [{
-      name: 'Analytics',
-      description: 'Get a better understanding of where your traffic is coming from.',
-      href: '#',
+      name: "Analytics",
+      description: "Get a better understanding of where your traffic is coming from.",
+      href: "#",
       icon: _heroicons_vue_24_outline__WEBPACK_IMPORTED_MODULE_0__
     }, {
-      name: 'Engagement',
-      description: 'Speak directly to your customers in a more meaningful way.',
-      href: '#',
+      name: "Engagement",
+      description: "Speak directly to your customers in a more meaningful way.",
+      href: "#",
       icon: _heroicons_vue_24_outline__WEBPACK_IMPORTED_MODULE_1__
     }, {
-      name: 'Security',
+      name: "Security",
       description: "Your customers' data will be safe and secure.",
-      href: '#',
+      href: "#",
       icon: _heroicons_vue_24_outline__WEBPACK_IMPORTED_MODULE_2__
     }, {
-      name: 'Integrations',
+      name: "Integrations",
       description: "Connect with third-party tools that you're already using.",
-      href: '#',
+      href: "#",
       icon: _heroicons_vue_24_outline__WEBPACK_IMPORTED_MODULE_3__
     }];
     var callsToAction = [{
-      name: 'Watch Demo',
-      href: '#',
+      name: "Watch Demo",
+      href: "#",
       icon: _heroicons_vue_24_outline__WEBPACK_IMPORTED_MODULE_4__
     }, {
-      name: 'View All Products',
-      href: '#',
+      name: "View All Products",
+      href: "#",
       icon: _heroicons_vue_24_outline__WEBPACK_IMPORTED_MODULE_5__
     }, {
-      name: 'Contact Sales',
-      href: '#',
+      name: "Contact Sales",
+      href: "#",
       icon: _heroicons_vue_24_outline__WEBPACK_IMPORTED_MODULE_6__
     }];
     var company = [{
-      name: 'About',
-      href: '#',
+      name: "About",
+      href: "#",
       icon: _heroicons_vue_24_outline__WEBPACK_IMPORTED_MODULE_7__
     }, {
-      name: 'Customers',
-      href: '#',
+      name: "Customers",
+      href: "#",
       icon: _heroicons_vue_24_outline__WEBPACK_IMPORTED_MODULE_8__
     }, {
-      name: 'Press',
-      href: '#',
+      name: "Press",
+      href: "#",
       icon: _heroicons_vue_24_outline__WEBPACK_IMPORTED_MODULE_9__
     }, {
-      name: 'Careers',
-      href: '#',
+      name: "Careers",
+      href: "#",
       icon: _heroicons_vue_24_outline__WEBPACK_IMPORTED_MODULE_10__
     }, {
-      name: 'Privacy',
-      href: '#',
+      name: "Privacy",
+      href: "#",
       icon: _heroicons_vue_24_outline__WEBPACK_IMPORTED_MODULE_2__
     }];
     var resources = [{
-      name: 'Community',
-      href: '#',
+      name: "Community",
+      href: "#",
       icon: _heroicons_vue_24_outline__WEBPACK_IMPORTED_MODULE_11__
     }, {
-      name: 'Partners',
-      href: '#',
+      name: "Partners",
+      href: "#",
       icon: _heroicons_vue_24_outline__WEBPACK_IMPORTED_MODULE_12__
     }, {
-      name: 'Guides',
-      href: '#',
+      name: "Guides",
+      href: "#",
       icon: _heroicons_vue_24_outline__WEBPACK_IMPORTED_MODULE_13__
     }, {
-      name: 'Webinars',
-      href: '#',
+      name: "Webinars",
+      href: "#",
       icon: _heroicons_vue_24_outline__WEBPACK_IMPORTED_MODULE_14__
     }];
     var blogPosts = [{
       id: 1,
-      name: 'Boost your conversion rate',
-      href: '#',
-      preview: 'Eget ullamcorper ac ut vulputate fames nec mattis pellentesque elementum. Viverra tempor id mus.',
-      imageUrl: 'https://images.unsplash.com/photo-1558478551-1a378f63328e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2849&q=80'
+      name: "Boost your conversion rate",
+      href: "#",
+      preview: "Eget ullamcorper ac ut vulputate fames nec mattis pellentesque elementum. Viverra tempor id mus.",
+      imageUrl: "https://images.unsplash.com/photo-1558478551-1a378f63328e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2849&q=80"
     }, {
       id: 2,
-      name: 'How to use search engine optimization to drive traffic to your site',
-      href: '#',
-      preview: 'Eget ullamcorper ac ut vulputate fames nec mattis pellentesque elementum. Viverra tempor id mus.',
-      imageUrl: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2300&q=80'
+      name: "How to use search engine optimization to drive traffic to your site",
+      href: "#",
+      preview: "Eget ullamcorper ac ut vulputate fames nec mattis pellentesque elementum. Viverra tempor id mus.",
+      imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2300&q=80"
     }];
     var __returned__ = {
       solutions: solutions,
@@ -28958,15 +28958,15 @@ var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
   "class": "text-base font-medium text-gray-500 hover:text-gray-900"
 }, "Home", -1 /* HOISTED */);
 var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-  href: "/associatelink",
+  href: "/data-services",
   "class": "text-base font-medium text-gray-500 hover:text-gray-900"
 }, "Data Services", -1 /* HOISTED */);
 var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-  href: "#",
-  "class": "text-base font-medium text-gray-500 hover:text-gray-900"
+  href: "/aboutus",
+  "class": "text-base fo nt-medium text-gray-500 hover:text-gray-900"
 }, "About Us", -1 /* HOISTED */);
 var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-  href: "#",
+  href: "/contectus",
   "class": "text-base font-medium text-gray-500 hover:text-gray-900"
 }, "Contact", -1 /* HOISTED */);
 var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
@@ -29065,7 +29065,7 @@ var _hoisted_28 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
   "class": "flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
 }, "Sign up"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "mt-6 text-center text-base font-medium text-gray-500"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Existing customer? " + /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(' ') + " "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Existing customer? " + /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(" ") + " "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
   href: "#",
   "class": "text-indigo-600 hover:text-indigo-500"
 }, "Sign in")])])], -1 /* HOISTED */);
