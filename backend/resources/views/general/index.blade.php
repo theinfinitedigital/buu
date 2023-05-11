@@ -29,23 +29,8 @@
                             @csrf
                             <div class="col-md-10">
                                 <a type="button" class="btn btn-secondary" href="/">กลับ</a>
-                                
-                                <div class="row my-4 justify-content-center">
-                                    <div class="col-sm-3 col-md-3 col-lg-3">
-                                    </div>
-                                    <div class="col-sm-7 col-md-7 col-lg-7">
-                                        <img src="{{ asset($data->index_banner)  }}" alt="" id="preview5" width="400px">
-                                    </div>
-                                </div>
 
-                                <div class="row my-4 justify-content-center">
-                                    <div class="col-sm-3 col-md-3 col-lg-3">
-                                        index_banner
-                                    </div>
-                                    <div class="col-sm-7 col-md-7 col-lg-7">
-                                        <input class="form-control @error('index_banner') is-invalid @enderror" type="file" name="index_banner" id="index_banner" onchange="get_images(event,5);">
-                                    </div>
-                                </div>
+                             
                                 <div class="row my-4 justify-content-center">
                                     <input type="hidden" name="id" id="id" value="{{ $data->id }}" >
                                     <div class="col-sm-3 col-md-3 col-lg-3">
@@ -110,6 +95,15 @@
                                 
                                 <div class="row my-4 justify-content-center">
                                     <div class="col-sm-3 col-md-3 col-lg-3">
+                                        alt_contact_us_path
+                                    </div>
+                                    <div class="col-sm-7 col-md-7 col-lg-7">
+                                        <input class="form-control @error('alt_contact_us_path') is-invalid @enderror" type="text" name="alt_contact_us_path" id="alt_contact_us_path" value="{{ $data->alt_contact_us_path }}">
+                                    </div>
+                                </div>
+                                
+                                <div class="row my-4 justify-content-center">
+                                    <div class="col-sm-3 col-md-3 col-lg-3">
                                     </div>
                                     <div class="col-sm-7 col-md-7 col-lg-7">
                                         <img src="{{ asset($data->contact_us_path_banner)  }}" alt="" id="preview2" width="400px">
@@ -122,6 +116,15 @@
                                     </div>
                                     <div class="col-sm-7 col-md-7 col-lg-7">
                                         <input class="form-control @error('contact_us_path_banner') is-invalid @enderror" type="file" name="contact_us_path_banner" id="contact_us_path_banner" onchange="get_images(event,2);">
+                                    </div>
+                                </div>
+                                
+                                <div class="row my-4 justify-content-center">
+                                    <div class="col-sm-3 col-md-3 col-lg-3">
+                                        alt_contact_us_path_banner
+                                    </div>
+                                    <div class="col-sm-7 col-md-7 col-lg-7">
+                                        <input class="form-control @error('alt_contact_us_path_banner') is-invalid @enderror" type="text" name="alt_contact_us_path_banner" id="alt_contact_us_path_banner" value="{{ $data->alt_contact_us_path_banner }}">
                                     </div>
                                 </div>
 
@@ -163,6 +166,15 @@
                                 
                                 <div class="row my-4 justify-content-center">
                                     <div class="col-sm-3 col-md-3 col-lg-3">
+                                        alt_address_path
+                                    </div>
+                                    <div class="col-sm-7 col-md-7 col-lg-7">
+                                        <input class="form-control @error('alt_address_path') is-invalid @enderror" type="text" name="alt_address_path" id="alt_address_path" value="{{ $data->alt_address_path }}">
+                                    </div>
+                                </div>
+                                
+                                <div class="row my-4 justify-content-center">
+                                    <div class="col-sm-3 col-md-3 col-lg-3">
                                     </div>
                                     <div class="col-sm-7 col-md-7 col-lg-7">
                                         <img src="{{ asset($data->address_path_banner)  }}" alt="" id="preview4" width="400px">
@@ -175,6 +187,15 @@
                                     </div>
                                     <div class="col-sm-7 col-md-7 col-lg-7">
                                         <input class="form-control @error('address_path_banner') is-invalid @enderror" type="file" name="address_path_banner" id="address_path_banner" onchange="get_images(event,4);">
+                                    </div>
+                                </div>
+                                
+                                <div class="row my-4 justify-content-center">
+                                    <div class="col-sm-3 col-md-3 col-lg-3">
+                                        alt_address_path_banner
+                                    </div>
+                                    <div class="col-sm-7 col-md-7 col-lg-7">
+                                        <input class="form-control @error('alt_address_path_banner') is-invalid @enderror" type="text" name="alt_address_path_banner" id="alt_address_path_banner" value="{{ $data->alt_address_path_banner }}">
                                     </div>
                                 </div>
 

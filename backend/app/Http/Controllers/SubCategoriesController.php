@@ -46,6 +46,8 @@ class SubCategoriesController extends Controller
             $request->path->move(public_path('storage/sub_categories/'), $imageName);
             $path = 'storage/sub_categories/'.$imageName;
             $data->path = $path;
+            
+            $data->alt = $request->alt ?? '';
 
             $data->save();
 
@@ -87,6 +89,8 @@ class SubCategoriesController extends Controller
                 $path = 'storage/sub_categories/'.$imageName;
                 $data->path = $path;
             }
+            
+            $data->alt = $request->alt ?? '';
             $data->save();
 
             return back()->with('success', __('บันทึกข้อมูลเรียบร้อยแล้ว'));

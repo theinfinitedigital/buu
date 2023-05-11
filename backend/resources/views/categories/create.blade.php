@@ -79,6 +79,15 @@
                                 
                                 <div class="row my-4 justify-content-center">
                                     <div class="col-sm-3 col-md-3 col-lg-3">
+                                        alt_cover
+                                    </div>
+                                    <div class="col-sm-7 col-md-7 col-lg-7">
+                                        <input class="form-control @error('alt_cover') is-invalid @enderror" type="text" name="alt_cover" id="alt_cover" value="{{ old('alt_cover') }}">
+                                    </div>
+                                </div>
+                                
+                                <div class="row my-4 justify-content-center">
+                                    <div class="col-sm-3 col-md-3 col-lg-3">
                                     </div>
                                     <div class="col-sm-7 col-md-7 col-lg-7">
                                         <img src="" alt="" id="preview2" width="400px" style="display: none;">
@@ -91,6 +100,15 @@
                                     </div>
                                     <div class="col-sm-7 col-md-7 col-lg-7">
                                         <input class="form-control @error('banner_path') is-invalid @enderror" type="file" name="banner_path" id="banner_path" onchange="get_images1(event);" required>
+                                    </div>
+                                </div>
+
+                                <div class="row my-4 justify-content-center">
+                                    <div class="col-sm-3 col-md-3 col-lg-3">
+                                        alt_banner
+                                    </div>
+                                    <div class="col-sm-7 col-md-7 col-lg-7">
+                                        <input class="form-control @error('alt_banner') is-invalid @enderror" type="text" name="alt_banner" id="alt_banner" value="{{ old('alt_banner') }}">
                                     </div>
                                 </div>
 

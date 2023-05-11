@@ -39,6 +39,7 @@ class DepartmentController extends Controller
             $request->path->move(public_path('storage/department/'), $imageName);
             $path = 'storage/department/'.$imageName;
             $data->path = $path;
+            $data->alt = $request->alt ?? '';
 
             $data->save();
 
@@ -75,6 +76,7 @@ class DepartmentController extends Controller
                 $path = 'storage/department/'.$imageName;
                 $data->path = $path;
             }
+            $data->alt = $request->alt ?? '';
             
             $data->save();
 

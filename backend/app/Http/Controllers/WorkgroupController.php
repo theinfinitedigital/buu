@@ -39,6 +39,7 @@ class WorkgroupController extends Controller
             $request->path->move(public_path('storage/workgroup/'), $imageName);
             $path = 'storage/workgroup/'.$imageName;
             $data->path = $path;
+            $data->alt = $request->alt ?? '';
 
             $data->save();
 
@@ -76,30 +77,26 @@ class WorkgroupController extends Controller
                 $data->path = $path;
             }
             
+            $data->alt = $request->alt ?? '';
+            
             $data->save();
 
             return back()->with('success', __('บันทึกข้อมูลเรียบร้อยแล้ว'));
-
-
         }catch(Exception $e){
             $result = ['ไม่สามารถทำการได้ในขณะนี้ กรุณาติดต่อเจ้าหน้าที่ผู้ดูแลระบบ'];
             return back()->withErrors($result)->withInput();
-
         }
 
     }
     function del($id){
         try{
-
-                $data = Workgroup::find($id);
-                unlink(public_path($data->path)); // del old file
-                Workgroup::find($id)->delete();
-                return redirect()->route('index_workgroup')->with('success', __('ลบเรียบร้อยแล้ว'));
-            
+            $data = Workgroup::find($id);
+            unlink(public_path($data->path)); // del old file
+            Workgroup::find($id)->delete();
+            return redirect()->route('index_workgroup')->with('success', __('ลบเรียบร้อยแล้ว'));
         }catch(Exception $e){
             $result = ['ไม่สามารถทำการได้ในขณะนี้ กรุณาติดต่อเจ้าหน้าที่ผู้ดูแลระบบ'];
             return back()->withErrors($result)->withInput();
-
         }
     }
 }

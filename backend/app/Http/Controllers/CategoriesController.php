@@ -38,6 +38,9 @@ class CategoriesController extends Controller
             $data->des_th = $request->des_th ??'';
             $data->des_en = $request->des_en ??'';
 
+            $data->alt_cover = $request->alt_cover ?? '';
+            $data->alt_banner = $request->alt_banner ?? '';
+
             $imageName = time().rand(10,9999999).'.'.$request->cover_path->extension(); 
             $request->cover_path->move(public_path('storage/categories/'), $imageName);
             $cover_path = 'storage/categories/'.$imageName;
@@ -76,6 +79,8 @@ class CategoriesController extends Controller
             $data->title_en = $request->title_en;
             $data->des_th = $request->des_th ?? '';
             $data->des_en = $request->des_en ?? '';
+            $data->alt_cover = $request->alt_cover ?? '';
+            $data->alt_banner = $request->alt_banner ?? '';
 
             if($request->cover_path){
                 
