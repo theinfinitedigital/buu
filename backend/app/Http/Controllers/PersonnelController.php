@@ -44,6 +44,7 @@ class PersonnelController extends Controller
             $request->path->move(public_path('storage/personnel/'), $imageName);
             $path = 'storage/personnel/'.$imageName;
             $data->path = $path;
+            $data->alt = $request->alt ?? '';
 
             $data->save();
 
@@ -86,6 +87,7 @@ class PersonnelController extends Controller
                 $data->path = $path;
             }
             
+            $data->alt = $request->alt ?? '';
             $data->save();
 
             return back()->with('success', __('บันทึกข้อมูลเรียบร้อยแล้ว'));

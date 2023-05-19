@@ -72,3 +72,10 @@ Route::get('/edit/personnel/{id}&{uid}', [App\Http\Controllers\PersonnelControll
 Route::post('/update/personnel', [App\Http\Controllers\PersonnelController::class, 'update'])->name('update_personnel');
 Route::get('/del-personnel/personnel/{id}', [App\Http\Controllers\PersonnelController::class, 'del'])->name('del_personnel');
 
+Route::get('/index-banner', [App\Http\Controllers\IndexBannerController::class, 'index'])->name('index_banner');
+Route::get('/add-index_banner', [App\Http\Controllers\IndexBannerController::class, 'add'])->name('add_index_banner');
+Route::post('/create/index_banner', [App\Http\Controllers\IndexBannerController::class, 'create'])->name('create_index_banner');
+Route::get('/edit/index_banner/{id}&{uid}', [App\Http\Controllers\IndexBannerController::class, 'edit'])->name('edit_index_banner');
+Route::post('/update/index_banner', [App\Http\Controllers\IndexBannerController::class, 'update'])->name('update_index_banner');
+Route::get('/del-index_banner/index_banner/{id}', [App\Http\Controllers\IndexBannerController::class, 'del'])->name('del_index_banner');
+

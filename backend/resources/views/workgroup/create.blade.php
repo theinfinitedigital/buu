@@ -59,6 +59,15 @@
                                         <input class="form-control @error('path') is-invalid @enderror" type="file" name="path" id="path" onchange="get_images(event);" required>
                                     </div>
                                 </div>
+                                
+                                <div class="row my-4 justify-content-center">
+                                    <div class="col-sm-3 col-md-3 col-lg-3">
+                                        alt
+                                    </div>
+                                    <div class="col-sm-7 col-md-7 col-lg-7">
+                                        <input class="form-control @error('alt') is-invalid @enderror" type="text" name="alt" id="alt" value="{{ old('alt') }}">
+                                    </div>
+                                </div>
 
 
                                 <div class="row my-4 justify-content-center">

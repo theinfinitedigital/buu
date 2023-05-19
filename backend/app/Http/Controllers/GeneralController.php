@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Carbon\Carbon;
 use App\Models\General;
+use App\Models\IndexBanner;
 
 use Exception;
 
@@ -21,7 +22,9 @@ class GeneralController extends Controller
     public function index()
     {
         $data = General::find(1);
-        return view('general.index', compact('data'));
+        $banner = IndexBanner::get();
+        
+        return view('general.index', compact('data','banner'));
     }
 
     function update(Request $request){
@@ -41,6 +44,10 @@ class GeneralController extends Controller
             $data->index_header_title = $request->index_header_title;
             $data->index_title_content = $request->index_title_content;
             $data->index_content = $request->index_content ?? '';
+            $data->alt_contact_us_path = $request->alt_contact_us_path ?? '';
+            $data->alt_contact_us_path_banner = $request->alt_contact_us_path_banner ?? '';
+            $data->alt_address_path = $request->alt_address_path ?? '';
+            $data->alt_address_path_banner = $request->alt_address_path_banner ?? '';
 
             
             if($request->contact_us_path){
@@ -75,14 +82,14 @@ class GeneralController extends Controller
                 $address_path_banner = 'storage/banner/'.$imageName;
                 $data->address_path_banner = $address_path_banner;
             }
-            if($request->index_banner){
+            // if($request->index_banner){
                 
-                // unlink(public_path($data->index_banner)); // del old file
-                $imageName = time().rand(10,9999999).'.'.$request->index_banner->extension(); 
-                $request->index_banner->move(public_path('storage/banner/'), $imageName);
-                $index_banner = 'storage/banner/'.$imageName;
-                $data->index_banner = $index_banner;
-            }
+            //     // unlink(public_path($data->index_banner)); // del old file
+            //     $imageName = time().rand(10,9999999).'.'.$request->index_banner->extension(); 
+            //     $request->index_banner->move(public_path('storage/banner/'), $imageName);
+            //     $index_banner = 'storage/banner/'.$imageName;
+            //     $data->index_banner = $index_banner;
+            // }
             if($request->index_cover_path){
                 
                 // unlink(public_path($data->index_cover_path)); // del old file
