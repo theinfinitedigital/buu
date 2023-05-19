@@ -10,4 +10,18 @@
     html {
         font-family: 'Prompt', sans-serif;
     }
+    ::-webkit-scrollbar {
+        width: 6px;
+        margin-right: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #88888850;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
 }

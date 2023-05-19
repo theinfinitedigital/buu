@@ -1,69 +1,46 @@
 @extends('layouts.app')
 @section('content')
-    <div class="grid grid-cols-1 mb-[80px]">
-        <div class="relative">
-            <img class="h-auto md:h-screen w-full object-cover object-center" src="{{asset('images/Home/banner 1920x980.jpg')}}"
-                alt="People working on laptops" />
-        </div>
-        <div class="absolute bottom-10 left-10">
-            <p class="text-lg text-neutralbuu ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat temporibus
-                aut
-                similique ducimus fugit tempora id consequuntur aliquid? Doloremque cum tenetur culpa quis et quam
-                eveniet ducimus dolorum maiores porro.</p>
-        </div>
+    <div class="mx-auto">
+        <bannercomponent status="1" data="test" src="images/Home/banner 1920x980.jpg"></bannercomponent>
     </div>
-    <div class="mx-auto mb-[40px] w-full">
-        <div class="grid grid-cols-1 px-4 md:px-20 ">
-            <div class="text-center pb-10">
-                <h1 class="text-5xl text-primarybuu font-medium uppercase">DATA CENTER</h1>
-            </div>
-            <div class="flex justify-center pb-20">
-                <div class="rounded-xl text-center ">
-                    <img class="w-full h-auto object-cover rounded-xl" src="https://via.placeholder.com/715x389">
-                </div>
-            </div>
-            <div>
-                <div class="mx-auto max-w-[1782px] mb-[80px] text-center">
-                    <h2 class="text-3xl text-primarybuu font-bold capitalize pb-2">Content 1</h2>
-                    <p class="text-lg text-neutralbuu ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat
-                        temporibus aut
-                        similique ducimus fugit tempora id consequuntur aliquid? Doloremque cum tenetur culpa quis et quam
-                        eveniet ducimus dolorum maiores porro. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                        Iusto, at laboriosam corrupti ab dignissimos perferendis neque. Quia cupiditate nobis repudiandae
-                        hic unde iste. Rerum dolore inventore beatae earum, eveniet doloremque.</p>
-                    <div class="mt-20 mb-5 mx-auto w-1/12">
-                        <a href="#" class="">
-                            <button
-                                class="py-2 px-4 bg-secondarybuu text-white text-sm capitalize rounded-xl shadow-xl h-10 w-auto">
-                                read more
-                            </button>
-                        </a>
+    <div class="mx-auto w-full h-auto">
+        <div class="grid grid-cols-1 px-4 md:px-72 pt-96 pb-40 bg-top bg-cover"
+            style="background-image: url('/images/Home/bg data center 2.png');">
+            <div class="grid grid-cols-1 md:grid-cols-7  gap-10">
+                <div class="md:col-span-4 rounded-xl text-center"><img class="w-auto h-full object-cover rounded-xl"
+                        src="{{asset('images/Contact Us/IMG_3847.jpg')}}" alt="About Us Image"></div>
+                <div class="md:col-span-3 mx-auto text-left bg-white/80 rounded-xl">
+                    <div class="overflow-y-auto p-10 h-[506px]">
+                        <h2 class="text-3xl text-primarybuu font-bold capitalize pb-2 text-center">About Us</h2>
+                        <p class="text-lg text-neutralbuu indent-12 text-justify">ก้าวสำคัญของโลกอนาคตด้วยการขับเคลื่อนด้วยข้อมูล
+                            เป็นสิ่งสำคัญที่จะต้องมีการเตรียมความพร้อมของการจัดเก็บข้อมูลที่ถูกต้อง
+                            เข้าใจลักษณะพื้นฐานของข้อมูล มีกระบวนการจัดเก็บข้อมูลที่ถูกหลักการ
+                            เพื่อสามารถนำข้อมูลไปใช้ประโยชน์ได้จริง การสร้างระบบจัดเก็บข้อมูลให้มีคุณภาพ เข้าถึงง่าย
+                            จึงมีความจำเป็น ที่ทำให้ข้อมูลมีมาตรฐาน
+                            สามารถยกระดับมูลค่าของข้อมูลในรูปแบบงานวิจัยทางวิทยาศาสตร์ และสังคมศาสตร์
+                            พร้อมด้วยการวิเคราะห์ข้อมูลเพื่อตอบโจทย์ความต้องการของผู้ใช้บริการทั้งเกษตรกร แรงงาน ภาคเอกชน
+                            และหน่วยงานรัฐบาล
+                            ดังนั้น ทีมงาน มหาวิทยาลัยบูรพา วิทยาเขตจันทบุรี และทีมงานคณาจารย์ คณะวิทยาศาสตร์และศิลปศาสตร์
+                            จึงได้เริ่มการจัดเก็บบัญชีข้อมูลโดยเริ่มต้นความร่วมมือจากหน่วยงานภาครัฐในจังหวัดจันทบุรี
+                            เพื่อที่จะสร้างศูนย์ข้อมูลในภาคตะวันออก
+                            ที่คาดหวังว่าสามารถตอบโจทย์ความต้องการของประชาชนในจังหวัดด้วยมูลค่าของข้อมูล
+                            โดยเฉพาะอย่างยิ่งการช่วยเหลือกลุ่มเกษตรกรที่เป็นรากฐานสำคัญของประเทศไทย
+                            นอกจากนี้ทางทีมงานวางแผนที่จะพัฒนาระบบฐานข้อมูล ๆ การใช้เทคโนโลยีด้านข้อมูล และสร้าง website
+                            เพื่อเสนอข้อมูลด้วยภาพ รวมไปถึงระบบการพยากรณ์ต่าง ๆ
+                            ที่ประชาชนสามารถเข้าถึงข้อมูลพื้นฐานทางการเกษตร และเศรษฐกิจได้
+                            โดยศูนย์ข้อมูลแห่งนี้เกิดจากการเริ่มต้นจากศูนย์ข้อมูลทางการเกษตรในจังหวัดจันทบุรี
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="mx-auto mb-[160px] w-full">
-        <div class="grid grid-cols-1 px-4 md:px-20 ">
+    <div class="mx-auto mb-[160px] w-full ">
+        <div class="grid grid-cols-1 px-4 md:px-20">
             <div class="text-center mb-10">
                 <h1 class="text-[50px] text-primarybuu font-bold uppercase pb-2">ข้อมูลให้บริการ</h1>
             </div>
-            <div class="grid grid-cols-3 gap-24 justify-items-center ">
-                @for ($i = 0; $i < 11; $i++)
-                <a href="/dataservices-detail">
-                    <div
-                        class="flex flex-col p-5 w-[472px] h-[452px] rounded-xl bg-white shadow-[1px_1px_10px_0_rgba(0,0,0,0.3)]">
-                        <div>
-                            <img class="w-full h-auto object-cover rounded-xl" src="https://via.placeholder.com/433x299">
-                        </div>
-                        <div class="text-center pt-9">
-                            <h2 class="text-2xl text-secondarybuu font-medium capitalize">Agriculture</h2>
-                            <p class="text-base text-neutralbuu">การเกษตร ภาคตะวันออก</p>
-                        </div>
-                    </div>
-                </a>
-                @endfor
-            </div>
+            <dataservices></dataservices>
         </div>
     </div>
 @endsection
