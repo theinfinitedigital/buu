@@ -13,35 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Route::get('/storages', function () {
-    return view('frontend.storages');
-});
-
-Route::get('/folder', function () {
-    return view('frontend.folder');
-});
-
-Route::get('/associatelink', function () {
-    return view('frontend.associatelink');
-});
-
-Route::get('/data-services', function () {
-    return view('frontend.blogs');
-});
-
-Route::get('/dataservices-detail', function () {
-    return view('frontend.detailblogs.detailblogs');
-});
-
-Route::get('/categories', function () {
-    return view('frontend.categories');
-});
-
-Route::get('/aboutus', function () {
-    return view('frontend.aboutus');
-});
-
-Route::get('/contectus', function () {
-    return view('frontend.contectus');
-});
+Route::get('/folder', [App\Http\Controllers\FolderController::class, 'folder'])->name('folder');
+Route::get('/data-services', [App\Http\Controllers\DataServicesController::class, 'blogs'])->name('blogs');
+Route::get('/dataservices-detail', [App\Http\Controllers\DataServicesDetailController::class, 'detailblogs'])->name('detailblogs');
+Route::get('/aboutus', [App\Http\Controllers\AboutUsController::class, 'aboutus'])->name('aboutus');
+Route::get('/contectus', [App\Http\Controllers\ContectUsController::class, 'contectus'])->name('contectus');

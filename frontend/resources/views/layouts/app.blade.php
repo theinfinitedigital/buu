@@ -17,9 +17,9 @@
 </head>
 
 <body>
-    <div id="app">
+    <div id="app" class="bg-repeat" style="background-image: url('/images/Home/bg home ข้อมูลให้บริการ.png');">
         <navcomponent></navcomponent>
-        <main>
+        <main >
             @yield('content')
         </main>
         <footercomponent></footercomponent>
