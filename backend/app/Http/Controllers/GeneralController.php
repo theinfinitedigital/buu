@@ -48,8 +48,59 @@ class GeneralController extends Controller
             $data->alt_contact_us_path_banner = $request->alt_contact_us_path_banner ?? '';
             $data->alt_address_path = $request->alt_address_path ?? '';
             $data->alt_address_path_banner = $request->alt_address_path_banner ?? '';
+            $data->alt_index_cover_path = $request->alt_index_cover_path ?? '';
+            $data->index_cover_path_type = $request->index_cover_path_type;
 
+        
+
+            if($request->index_cover_path_type == $request->index_cover_path_type_ori){
+
+                if($request->index_cover_path_type == 'image'){
+                    if($request->index_cover_path){
+                        
+                        $imageName = time().rand(10,9999999).'.'.$request->index_cover_path->extension(); 
+                        $request->index_cover_path->move(public_path('storage/banner/'), $imageName);
+                        $index_cover_path = 'storage/banner/'.$imageName;
+                        $data->index_cover_path = $index_cover_path;
+                    }
+                }else if($request->index_cover_path_type == 'video'){
+                    $data->index_cover_path = $request->index_cover_path_v;
+                }
             
+            }else{
+               
+    
+                if($request->index_cover_path_type == 'image'){ 
+                    $validator = Validator::make($request->all(), [
+                    'index_cover_path' => 'required',
+                    ], [
+                        'index_cover_path.required' => 'จำเป็นต้องเลือกรูป index_cover_path',
+                    ]);
+        
+                    if ($validator->fails()) {
+                        return back()->withErrors($validator)->withInput();
+                    }
+                    if($request->index_cover_path){
+                        
+                        $imageName = time().rand(10,9999999).'.'.$request->index_cover_path->extension(); 
+                        $request->index_cover_path->move(public_path('storage/banner/'), $imageName);
+                        $index_cover_path = 'storage/banner/'.$imageName;
+                        $data->index_cover_path = $index_cover_path;
+                    }
+                }else if($request->index_cover_path_type == 'video'){
+                    $validator = Validator::make($request->all(), [
+                        'index_cover_path_v' => 'required',
+                    ], [
+                        'index_cover_path_v.required' => 'จำเป็นต้องระบุ index_cover_path video',
+                    ]);
+        
+                    if ($validator->fails()) {
+                        return back()->withErrors($validator)->withInput();
+                    }
+                    $data->index_cover_path = $request->index_cover_path_v;
+                }
+                
+            }
             if($request->contact_us_path){
                 
                 // unlink(public_path($data->contact_us_path)); // del old file
@@ -82,22 +133,7 @@ class GeneralController extends Controller
                 $address_path_banner = 'storage/banner/'.$imageName;
                 $data->address_path_banner = $address_path_banner;
             }
-            // if($request->index_banner){
-                
-            //     // unlink(public_path($data->index_banner)); // del old file
-            //     $imageName = time().rand(10,9999999).'.'.$request->index_banner->extension(); 
-            //     $request->index_banner->move(public_path('storage/banner/'), $imageName);
-            //     $index_banner = 'storage/banner/'.$imageName;
-            //     $data->index_banner = $index_banner;
-            // }
-            if($request->index_cover_path){
-                
-                // unlink(public_path($data->index_cover_path)); // del old file
-                $imageName = time().rand(10,9999999).'.'.$request->index_cover_path->extension(); 
-                $request->index_cover_path->move(public_path('storage/banner/'), $imageName);
-                $index_cover_path = 'storage/banner/'.$imageName;
-                $data->index_cover_path = $index_cover_path;
-            }
+          
 
             $data->save();
             

@@ -17,6 +17,7 @@
                     <a href="{{ route('index_department') }}" type="button" class="btn btn-primary" >Department</a>
                     <a href="{{ route('index_banner') }}" type="button" class="btn btn-primary" >Index Banner</a>
                     <a href="{{ route('index_personnel') }}" type="button" class="btn btn-primary" >Personnel</a>
+                    <a href="{{ route('index_research') }}" type="button" class="btn btn-primary" >Research Ready To Use</a>
 
                 </div>
             </div>

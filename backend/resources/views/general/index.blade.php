@@ -49,6 +49,78 @@
                                         <input class="form-control @error('index_title_content') is-invalid @enderror" type="text" name="index_title_content" id="index_title_content" value="{{ $data->index_title_content }}" required>
                                     </div>
                                 </div>
+                                
+                                <div class="row my-4 justify-content-center">
+                                    
+                                    <div class="col-sm-10 col-md-10 col-lg-10">
+                                        <nav>
+                                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                                <button class="nav-link <?php if($data->index_cover_path_type == 'image'){echo 'active';} ?>" onclick="ck_type_cover('image');" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">image</button>
+                                                <button class="nav-link <?php if($data->index_cover_path_type == 'video'){echo 'active';} ?>" onclick="ck_type_cover('video');" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">video</button>
+                                            </div>
+                                        </nav>
+                                        
+                                        <input type="hidden" value="{{$data->index_cover_path_type}}" name="index_cover_path_type" id="index_cover_path_type">
+                                        <input type="hidden" value="{{$data->index_cover_path_type}}" name="index_cover_path_type_ori">
+                                        
+                                        <div class="tab-content" id="nav-tabContent">
+                                            <div class="tab-pane fade <?php if($data->index_cover_path_type == 'image'){echo 'active show';} ?>" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                                <div class="mt-4">
+                                                    <div class="row my-4 justify-content-center">
+                                                        <div class="col-sm-3 col-md-3 col-lg-3">
+                                                        </div>
+                                                        <div class="col-sm-7 col-md-7 col-lg-7">
+                                                            @if($data->index_cover_path_type == 'image')
+                                                            <img src="{{ asset($data->index_cover_path) }}" alt="" id="preview5" width="400px">
+                                                            @else
+                                                            <img src="" alt="" id="preview5" width="400px" style="display: none;">
+                                                            @endif
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row my-4 justify-content-center">
+                                                        <div class="col-sm-3 col-md-3 col-lg-3">
+                                                            index_cover_path *
+                                                        </div>
+                                                        <div class="col-sm-7 col-md-7 col-lg-7">
+                                                            <input class="form-control @error('path') is-invalid @enderror" type="file" name="index_cover_path" id="index_cover_path" onchange="get_images(event,5);">
+                                                        </div>
+                                                    </div>
+
+                                                    
+                                                    <div class="row my-4 justify-content-center">
+                                                        <div class="col-sm-3 col-md-3 col-lg-3">
+                                                            alt_index_cover_path
+                                                        </div>
+                                                        <div class="col-sm-7 col-md-7 col-lg-7">
+                                                            <input class="form-control @error('alt') is-invalid @enderror" type="text" name="alt_index_cover_path" id="alt_index_cover_path" value="{{ $data->alt_index_cover_path }}">
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="tab-pane fade <?php if($data->index_cover_path_type == 'video'){echo 'active show';} ?>" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                                <div class="mt-4">
+                                                    <div class="row my-4 justify-content-center">
+                                                        <div class="col-sm-3 col-md-3 col-lg-3">
+                                                            index_cover_path *
+                                                        </div>
+                                                        <div class="col-sm-7 col-md-7 col-lg-7">
+                                                            
+                                                            @if($data->index_cover_path_type == 'video')
+                                                                <input class="form-control @error('path') is-invalid @enderror" type="text" name="index_cover_path_v" id="path2" value="{{$data->index_cover_path}}" required>
+                                                            @else
+                                                                <input class="form-control @error('path') is-invalid @enderror" type="text" name="index_cover_path_v" id="path2" value="">
+                                                            @endif
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="row my-4 justify-content-center">
                                     <div class="col-sm-3 col-md-3 col-lg-3">
                                         index_content
@@ -269,6 +341,13 @@
             output.src = reader.result;
         };
         reader.readAsDataURL(event.target.files[0]);
+        
+        document.getElementById("preview"+r).style.display = "block";
+    }
+
+    function ck_type_cover(type){
+        
+        document.getElementById("index_cover_path_type").value  = type
     }
 
 </script>

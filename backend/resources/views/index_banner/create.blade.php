@@ -23,7 +23,7 @@
                     <div class="row justify-content-center">
                         <div class="col-md-12">
                             
-                            <a type="button" class="btn btn-secondary" href="/index-banner">กลับ</a>
+                            <a type="button" class="btn btn-secondary mb-2" href="/index-banner">กลับ</a>
 
                             <nav>
                                 <div class="nav nav-tabs" id="nav-tab" role="tablist">

@@ -79,3 +79,11 @@ Route::get('/edit/index_banner/{id}&{uid}', [App\Http\Controllers\IndexBannerCon
 Route::post('/update/index_banner', [App\Http\Controllers\IndexBannerController::class, 'update'])->name('update_index_banner');
 Route::get('/del-index_banner/index_banner/{id}', [App\Http\Controllers\IndexBannerController::class, 'del'])->name('del_index_banner');
 
+
+Route::get('/research', [App\Http\Controllers\ResearchController::class, 'index'])->name('index_research');
+Route::get('/add-research', [App\Http\Controllers\ResearchController::class, 'add'])->name('add_research');
+Route::post('/create/research', [App\Http\Controllers\ResearchController::class, 'create'])->name('create_research');
+Route::get('/edit/research/{id}&{uid}', [App\Http\Controllers\ResearchController::class, 'edit'])->name('edit_research');
+Route::post('/update/research', [App\Http\Controllers\ResearchController::class, 'update'])->name('update_research');
+Route::get('/del-research/research/{id}', [App\Http\Controllers\ResearchController::class, 'del'])->name('del_research');
+

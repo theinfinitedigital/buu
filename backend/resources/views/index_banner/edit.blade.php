@@ -27,7 +27,7 @@
                     <div class="row justify-content-center">
                         <div class="col-md-12">
                             
-                            <a type="button" class="btn btn-secondary" href="/index-banner">กลับ</a>
+                            <a type="button" class="btn btn-secondary mb-2" href="/index-banner">กลับ</a>
 
                             <nav>
                                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -43,6 +43,7 @@
                                         @csrf
                                         <div class="mt-4">
                                             <input type="hidden" value="image" name="type">
+                                            <input type="hidden" value="{{$data->type}}" name="type_ori">
                                             <input type="hidden" name="id" id="id" value="{{ $data->id }}" >
                                             <div class="row my-4 justify-content-center">
                                                 <div class="col-sm-3 col-md-3 col-lg-3">
@@ -62,7 +63,7 @@
                                                     path *
                                                 </div>
                                                 <div class="col-sm-7 col-md-7 col-lg-7">
-                                                    <input class="form-control @error('path') is-invalid @enderror" type="file" name="path" id="path1" onchange="get_images(event);" required>
+                                                    <input class="form-control @error('path') is-invalid @enderror" type="file" name="path" id="path1" onchange="get_images(event);">
                                                 </div>
                                             </div>
 
@@ -100,13 +101,12 @@
                                         </div>
                                     </form>
                                 </div>
-                                
-
                                 <div class="tab-pane fade <?php if($data->type == 'video'){echo 'active show';} ?>" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                                     <form action="{{ route('update_index_banner') }}" method="POST" enctype="multipart/form-data">
                                         @csrf
                                         <div class="mt-4">
                                             <input type="hidden" value="video" name="type">
+                                            <input type="hidden" value="{{$data->type}}" name="type_ori">
                                             <input type="hidden" name="id" id="id" value="{{ $data->id }}" >
                                             <div class="row my-4 justify-content-center">
                                                 <div class="col-sm-3 col-md-3 col-lg-3">
@@ -117,7 +117,7 @@
                                                     @if($data->type == 'video')
                                                         <input class="form-control @error('path') is-invalid @enderror" type="text" name="path" id="path2" value="{{$data->path}}" required>
                                                     @else
-                                                        <input class="form-control @error('alt') is-invalid @enderror" type="text" name="path" id="path2" value="">
+                                                        <input class="form-control @error('path') is-invalid @enderror" type="text" name="path" id="path2" value="">
                                                     @endif
                                                 </div>
                                             </div>
@@ -143,65 +143,10 @@
                                             </div>
                                         </div>
                                     </form>
+                                </div>
                             </div>
 
                         </div>
-                        <!-- <form action="{{ route('update_index_banner') }}" method="POST" enctype="multipart/form-data">
-                            @csrf
-                            <div class="col-md-12">
-                                <a type="button" class="btn btn-secondary" href="/index-banner">กลับ</a>
-                                
-                                <input type="hidden" name="id" id="id" value="{{ $data->id }}" >
-
-                                
-                                <div class="row my-4 justify-content-center">
-                                    <div class="col-sm-3 col-md-3 col-lg-3">
-                                    </div>
-                                    <div class="col-sm-7 col-md-7 col-lg-7">
-                                        <img src="{{ asset($data->path) }}" alt="" id="preview" width="400px">
-                                    </div>
-                                </div>
-
-                                <div class="row my-4 justify-content-center">
-                                    <div class="col-sm-3 col-md-3 col-lg-3">
-                                        path
-                                    </div>
-                                    <div class="col-sm-7 col-md-7 col-lg-7">
-                                        <input class="form-control @error('path') is-invalid @enderror" type="file" name="path" id="path" onchange="get_images(event);">
-                                    </div>
-                                </div>
-
-                                <div class="row my-4 justify-content-center">
-                                    <div class="col-sm-3 col-md-3 col-lg-3">
-                                        alt
-                                    </div>
-                                    <div class="col-sm-7 col-md-7 col-lg-7">
-                                        <input class="form-control @error('alt') is-invalid @enderror" type="text" name="alt" id="alt" value="{{ $data->alt }}" >
-                                    </div>
-                                </div>
-
-                                <div class="row my-4 justify-content-center">
-                                    <div class="col-sm-3 col-md-3 col-lg-3">
-                                        enable *
-                                    </div>
-                                    <div class="col-sm-7 col-md-7 col-lg-7">
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input" type="checkbox" name="enable" id="enable" <?php if($data->enable == 1){ echo 'checked';} ?> >
-                                            <label class="form-check-label" for="enable"></label>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div class="row my-4 justify-content-center">
-                                    <div class="col-sm-3 col-md-3 col-lg-3">
-                                    </div>
-                                    <div class="col-sm-7 col-md-7 col-lg-7">
-                                        <button type="summit" class="btn btn-success">บันทึก</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form> -->
                     </div>
                 </div>
             </div>
@@ -218,6 +163,7 @@
             output.src = reader.result;
         };
         reader.readAsDataURL(event.target.files[0]);
+        document.getElementById("preview").style.display = "block";
     }
 
 </script>
