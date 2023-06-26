@@ -59,6 +59,20 @@
                             @endforelse
                         </tbody>
                     </table>
+
+                    <div class="conatiner mt-5">
+                        <br><br>
+                        <div class="form-group">
+                            <label for="csvData">Paste JSON Object Data:</label>
+                            <textarea id="josnData" class="form-control" rows="10">
+                                    [
+                                    {"name":"John", "age":30, "city":"New York"},
+                                    {"name":"Smith", "age":40, "city":"London"}
+                                    ]
+                            </textarea>
+	                    </div>		
+                        <button class="btn" type="button" id="exportWorksheet" >Export Worksheet</button>
+                    </div>
                     
                     <div class="col-12">
                         <nav aria-label="Page navigation">
@@ -74,3 +88,53 @@
     </div>
 </div>
 @endsection
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+<script>
+    var firebaseConfig = {
+        apiKey: "AIzaSyBjBbzhepKS9Z1eNUcQTALpUtzJgKbFPZw",
+        authDomain: "test-90c8f.firebaseapp.com",
+        databaseURL: "https://test-90c8f.firebaseio.com",
+        projectId: "test-90c8f",
+        storageBucket: "test-90c8f.appspot.com",
+        messagingSenderId: "864825689268",
+        appId: "1:864825689268:web:ae1acda1cbea0eb31983e1",
+        measurementId: "G-NRL93CL4WW"
+    }
+    const app  = firebase.initializeApp(firebaseConfig);
+    const db = app.firestore();
+    const auth = app.auth();
+    const data_center = firebase.firestore().collection('data_center');
+
+   
+
+    $( document ).ready(function() {
+        $("#exportWorksheet").click(function() {
+            // var josnData = $("#josnData").val();
+           
+            data_center.get().then((snapshot) => 
+            {
+                const data = snapshot.docs.map((doc) => ({
+                    id: doc.id,
+                    ...doc.data(),
+                }));
+                var jsonDataObject = eval(data);		
+                exportWorksheet(jsonDataObject); 
+            });
+
+        });
+
+    });
+
+    function exportWorksheet(jsonObject) {
+        var myFile = "myFile.xlsx";
+        var myWorkSheet = XLSX.utils.json_to_sheet(jsonObject);
+        var myWorkBook = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(myWorkBook, myWorkSheet, "myWorkSheet");
+        XLSX.writeFile(myWorkBook, myFile);
+    }
+
+</script>

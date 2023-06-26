@@ -74,6 +74,11 @@ class CategoriesController extends Controller
 
         try{
             
+            $enable = 0;
+            if($request->enable){
+                $enable = 1;
+            }
+            
             $data = Categorie::find($request->id);
             $data->title_th = $request->title_th;
             $data->title_en = $request->title_en;
@@ -81,6 +86,7 @@ class CategoriesController extends Controller
             $data->des_en = $request->des_en ?? '';
             $data->alt_cover = $request->alt_cover ?? '';
             $data->alt_banner = $request->alt_banner ?? '';
+            $data->enable = $enable;
 
             if($request->cover_path){
                 

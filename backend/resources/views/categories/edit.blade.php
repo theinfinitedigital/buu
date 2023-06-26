@@ -117,6 +117,19 @@
                                     </div>
                                 </div>
 
+                                
+                                <div class="row my-4 justify-content-center">
+                                    <div class="col-sm-3 col-md-3 col-lg-3">
+                                        enable *
+                                    </div>
+                                    <div class="col-sm-7 col-md-7 col-lg-7">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" name="enable" id="enable" <?php if($data->enable == 1){ echo 'checked';} ?> >
+                                            <label class="form-check-label" for="enable"></label>
+                                        </div>
+                                    </div>
+                                </div>
+
 
                                 <div class="row my-4 justify-content-center">
                                     <div class="col-sm-3 col-md-3 col-lg-3">

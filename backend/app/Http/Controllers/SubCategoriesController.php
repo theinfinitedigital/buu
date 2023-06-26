@@ -74,12 +74,18 @@ class SubCategoriesController extends Controller
 
         try{
             
+            $enable = 0;
+            if($request->enable){
+                $enable = 1;
+            }
+            
             $data = SubCategorie::find($request->id);
             $data->categorie_id = $request->categorie_id;
             $data->title_th = $request->title_th;
             $data->title_en = $request->title_en;
             $data->des_th = $request->des_th ?? '';
             $data->des_en = $request->des_en ?? '';
+            $data->enable = $enable;
 
             if($request->path){
                 unlink(public_path($data->path)); // del old file
